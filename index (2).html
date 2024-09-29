@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Ma'am Synab Andoy Melencio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #9a67b5, #38056e);
+            color: #ffffff;
+            overflow-y: scroll;
+            position: relative;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            animation: fadeIn 1s;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .poem, .message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            animation: fadeIn 1s;
+        }
+
+        button {
+            background-color: #ab6ef4;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            margin: 20px 0;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #9754db;
+            transform: scale(1.05);
+        }
+
+        .message-text {
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        /* Flower animation */
+        .flower {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: fall 6s infinite;
+            z-index: -1;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fall {
+            0% { top: -20px; }
+            100% { top: 100vh; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Happy Teacher’s Day, Ma'am Synab Andoy Melencio!</h1>
+            <p class="subtitle">From Keith, Nash, Charl, and Gerald - The Quadro Best Friends</p>
+        </header>
+
+        <button id="poem-btn">Read the Poem</button>
+       
+        <section class="poem" id="poem">
+            <h2>Our Special Poem for You</h2>
+            <div class="poem-text">
+                <p>In the classroom’s quiet hum and gentle sway,</p>
+                <p>There’s a beacon of light, a guiding ray.</p>
+                <p>Ma’am Shy, with her kindness and grace,</p>
+                <p>In every lesson, she finds her place.</p>
+                <p>For Nash, Charl, Gerald, and me,</p>
+                <p>She’s more than a teacher; she’s family.</p>
+                <p>With patience and care, she nurtures our minds,</p>
+                <p>Even when we’re stubborn or fall behind.</p>
+                <p>Her voice is calm, her spirit bright,</p>
+                <p>Guiding us through day and night.</p>
+                <p>In every subject, she makes us see,</p>
+                <p>The beauty in knowledge, the joy to be free.</p>
+                <p>Though sometimes we’re quiet, sometimes we stray,</p>
+                <p>She never gives up, she shows us the way.</p>
+                <p>Through laughter and lessons, she’s always there,</p>
+                <p>With a heart full of love and endless care.</p>
+                <p>Ma’am Shy, you’re a gem so rare,</p>
+                <p>With wisdom and patience beyond compare.</p>
+                <p>We’re grateful for the support you give,</p>
+                <p>And for teaching us more than just how to live.</p>
+                <p>You’ve been a mother, a mentor, a guide,</p>
+                <p>Standing with us, side by side.</p>
+                <p>For all the lessons, the laughter, the tears,</p>
+                <p>You’ve given us strength over the years.</p>
+                <p>Happy Teacher’s Day, Ma’am Synab Andoy Melencio!</p>
+                <p>From Nash, Charl, Gerald, and me too,</p>
+                <p>We thank you for all that you do,</p>
+                <p>For believing in us and seeing us through.</p>
+                <p>In our hearts, you’ll forever remain,</p>
+                <p>The teacher who eased our every pain.</p>
+                <p>With love and respect, we celebrate you,</p>
+                <p>For you’ve made our dreams and hopes come true.</p>
+            </div>
+        </section>
+        <button id="message-btn" style="display: none;">Message to Ma’am Synab Andoy Melencio click and scroll down</button>
+
+        <section class="message" id="message">
+            <h2>Our Message for You</h2>
+            <p class="message-text">
+                Dear Ma’am Shy,<br><br>
+                On this special day, we, the four best friends—Nash, Charl, Gerald, and I—want to thank you from the bottom of our hearts. 
+                You’ve treated us like your own, guiding us with kindness, patience, and endless love. 
+                Even when we were hardheaded or quiet, you never gave up on us. You taught us not just lessons from books, but lessons for life.<br><br>
+                You’ve been more than just a teacher; you’ve been a mother, a mentor, and a friend. 
+                We are so grateful for the support and care you’ve shown us. 
+                Thank you for believing in us, for pushing us to do better, and for being there every step of the way.<br><br>
+                Happy Teacher’s Day, Ma’am Synab Andoy Melencio! 
+                We’re blessed to have you in our lives, and we’ll always carry the lessons you’ve taught us wherever we go.<br><br>
+                With love and gratitude,<br>
+                Keith, Nash, Charl, and Gerald
+            </p>
+        </section>
+
+        <!-- Audio Player -->
+        <audio id="background-audio" src="juan karlos - Through the Years (From Lolo and the Kid) Official Music Video.mp3" loop></audio>
+        <img class="flower" src="flower_image.png" alt="" style="width: 50px;"/>
+
+    </div>
+
+    <script>
+        const poemBtn = document.getElementById('poem-btn');
+        const messageBtn = document.getElementById('message-btn');
+        const poem = document.getElementById('poem');
+        const message = document.getElementById('message');
+        const audio = document.getElementById('background-audio');
+
+        poemBtn.addEventListener('click', () => {
+            poem.style.display = 'block';
+            audio.play();  // Play the audio when the button is clicked
+            messageBtn.style.display = 'block'; // Show the message button
+        });
+
+        messageBtn.addEventListener('click', () => {
+            message.style.display = 'block'; // Show the message
+        });
+    </script>
+</body>
+</html>
